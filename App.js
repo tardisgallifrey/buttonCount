@@ -1,15 +1,56 @@
-import { View, Text } from "react-native";
+//A React Native App in Class form
+import React, { Component } from 'react';
+import { StatusBar } from 'react-native';
+import {
+  StyleSheet,
+  TouchableOpacity,
+  Text,
+  View,
+} from 'react-native'
 
-export default function App() {
-  return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text>Universal React with Expo</Text>
-    </View>
-  );
+class App extends Component {
+  state = {
+    count: 0
+  }
+
+  onPress = () => {
+    this.setState({
+      count: this.state.count + 1
+    })
+  }
+
+ render() {
+    return (
+      <View style={styles.container}>
+        <TouchableOpacity
+         style={styles.button}
+         onPress={this.onPress}
+        >
+         <Text>Click me</Text>
+        </TouchableOpacity>
+        <View>
+          <Text>
+            You clicked { this.state.count } times
+          </Text>
+          <StatusBar />
+        </View>
+      </View>
+    )
+  }
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  button: {
+    alignItems: 'center',
+    backgroundColor: '#DDDDDD',
+    padding: 10,
+    marginBottom: 10
+  }
+})
+
+export default App;

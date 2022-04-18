@@ -1,0 +1,10 @@
+{
+  "name": "buttonCount",
+  "displayName": "buttonCount",
+  "expo": {
+    "sdkVersion": "5.3.1",
+    "android": {
+      "package": "com.tardis1.buttoncount"
+    }
+  }
+}
