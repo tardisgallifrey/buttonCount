@@ -1,12 +1,8 @@
 //A React Native App in Class form
 import React, { Component } from 'react';
 import { StatusBar } from 'react-native';
-import {
-  StyleSheet,
-  TouchableOpacity,
-  Text,
-  View,
-} from 'react-native'
+import {TouchableOpacity, Text, View} from 'react-native'
+import {styles} from './styles';
 
 class App extends Component {
   state = {
@@ -22,6 +18,11 @@ class App extends Component {
  render() {
     return (
       <View style={styles.container}>
+        <View>
+          <Text>This is my first coded Android app</Text>
+          <Text>I have a long way to go.</Text>
+        </View>
+        <View></View>
         <TouchableOpacity
          style={styles.button}
          onPress={this.onPress}
@@ -39,18 +40,5 @@ class App extends Component {
   }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  button: {
-    alignItems: 'center',
-    backgroundColor: '#DDDDDD',
-    padding: 10,
-    marginBottom: 10
-  }
-})
 
 export default App;
